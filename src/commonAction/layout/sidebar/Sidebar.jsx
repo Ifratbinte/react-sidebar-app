@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsGrid3X3Gap } from "react-icons/bs";
 import sidebarMenu from "../../../data/sidebarData";
+import HeaderTools from "../topbar/HeaderTools";
 import SidebarItem from "./SidebarItem";
 
 export default function Sidebar() {
@@ -25,6 +26,7 @@ export default function Sidebar() {
       <div className="main-wrapper">
         <div className="wrapper-head px-3 py-2">
           <BsGrid3X3Gap onClick={() => HandleToggle()} className="btn-toggle" />
+          <HeaderTools />
         </div>
 
         <div className="wrapper-body p-3">
