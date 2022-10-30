@@ -24,7 +24,7 @@ export default function Sidebar() {
       </div>
 
       <div className="main-wrapper">
-        <div className="wrapper-head px-3 py-2">
+        <div className="wrapper-head">
           <BsGrid3X3Gap onClick={() => HandleToggle()} className="btn-toggle" />
           <HeaderTools />
         </div>
