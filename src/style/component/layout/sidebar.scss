@@ -2,52 +2,67 @@
   display: flex;
   height: 100vh;
 }
+.sidebar-item.open{
+  &> .sidebar-title {
+    border-left: 3px solid #7469b952;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(45deg, #4a3068, #282660);
+  }
+}
 .sidebar {
   width: 260px;
   flex-shrink: 0;
-  background-color: rgba(22, 22, 22, 1);
+  background-color: #282660;
   height: 100%;
   overflow: auto;
-}
-.sidebar-item {
-  padding: 0.75em 1em;
-  display: block;
-  transition: background-color 0.15s;
-  border-radius: 5px;
-}
-.sidebar-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  &-item {
+    padding: 0.75em 1em;
+    display: block;
+    // transition: background-color 0.15s;
+    border-radius: 5px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    &.open > .sidebar-title .toggle-btn {
+      transform: rotate(180deg);
+    }
+    &.open > .sidebar-content {
+      height: auto;
+    }
+    &.plain {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-content {
+    padding-top: 0.25em;
+    height: 0;
+    overflow: hidden;
+  }
+  &-title {
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    .toggle-btn {
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+  }
+  &-icon {
+    display: inline-block;
+    width: 1.5em;
+  }
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.sidebar-title {
-  display: flex;
-  font-size: 1.2em;
-  justify-content: space-between;
-  align-items: center;
-}
-.sidebar-icon {
-  display: inline-block;
-  width: 1.5em;
-}
-.sidebar-title .toggle-btn {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.sidebar-item.open > .sidebar-title .toggle-btn {
-  transform: rotate(180deg);
-}
-.sidebar-content {
-  padding-top: 0.25em;
-  height: 0;
-  overflow: hidden;
-}
-.sidebar-item.open > .sidebar-content {
-  height: auto;
-}
-.sidebar-item.plain {
-  color: #fff;
-  text-decoration: none;
-}
-.sidebar-item.plain:hover {
-  text-decoration: underline;
-}

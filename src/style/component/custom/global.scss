@@ -1,21 +1,14 @@
-.container {
-  flex-grow: 1;
-  padding: 2em;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
+
 .title {
   font-size: 3em;
+  color: #000;
 }
 .info {
   font-size: 1.1em;
   letter-spacing: 1px;
   line-height: 1.5;
-  margin: 1.5em;
-  color: rgb(224, 224, 224);
+  color: #000;
+}
+.btn-toggle {
+  color: #fff;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { NavLink } from "react-bootstrap";
 
-export default function SidebarItem({ item }) {
+function SidebarItem({ item }) {
   const [open, setOpen] = useState(false);
 
   if (item.children) {
@@ -22,10 +23,11 @@ export default function SidebarItem({ item }) {
     );
   } else {
     return (
-      <a href={item.path || "#"} className="sidebar-item plain">
+      <NavLink to={item.path || "#"} className="sidebar-item plain">
         {item.icon && <i className={item.icon}></i>}
         {item.title}
-      </a>
+      </NavLink>
     );
   }
 }
+export default SidebarItem;
