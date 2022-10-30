@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-bootstrap";
+import { FaAngleDown } from "react-icons/fa";
 
 function SidebarItem({ item }) {
   const [open, setOpen] = useState(false);
@@ -8,11 +9,11 @@ function SidebarItem({ item }) {
     return (
       <div className={open ? "sidebar-item open" : "sidebar-item"}>
         <div className="sidebar-title">
-          <span>
-            {item.icon && <i className={item.icon}></i>}
-            {item.title}
-          </span>
-          <i className="bi-chevron-down toggle-btn" onClick={() => setOpen(!open)}></i>
+          <div className="d-flex align-items-center">
+            <div className="menu-icon w-25px">{item.icon}</div>
+            <div className="menu-title">{item.title}</div>
+          </div>
+          <FaAngleDown className="toggle-btn" onClick={() => setOpen(!open)} />
         </div>
         <div className="sidebar-content">
           {item.children.map((child, index) => (
@@ -24,8 +25,10 @@ function SidebarItem({ item }) {
   } else {
     return (
       <NavLink to={item.path || "#"} className="sidebar-item plain">
-        {item.icon && <i className={item.icon}></i>}
-        {item.title}
+        <div className="d-flex align-items-center">
+          <div className="menu-icon w-25px">{item.icon}</div>
+          <div className="menu-title">{item.title}</div>
+        </div>
       </NavLink>
     );
   }
