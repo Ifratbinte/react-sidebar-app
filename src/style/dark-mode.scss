@@ -1,0 +1,30 @@
+/* For Dark mode */
+:root {
+  --background: white;
+  --text-primary: black;
+  --text-secondary: royalblue;
+  --accent: purple;
+}
+[data-theme="dark"] {
+  --background: black;
+  --text-primary: white;
+  --text-secondary: grey;
+  --accent: darkred;
+  --background-dim: rgb(24, 19, 65);
+}
+.main {
+  color: var(--text-primary);
+  background-color: var(--background);
+  height: calc(100vh - 40px);
+  transition: all 0.3s;
+}
+[data-theme="dark"] .sidebar {
+  background: var(--background-dim) !important;
+}
+.btn-theme {
+  color: var(--text-primary);
+  background-color: var(--background);
+  border: 2px var(--text-primary) solid;
+  float: right;
+  transition: all 0.5s;
+}
