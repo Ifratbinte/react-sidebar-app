@@ -15,7 +15,7 @@
   background-color: #282660;
   height: 100%;
   overflow: auto;
-  
+  z-index: 2;
   &-item {
     padding: 0.75em 1em;
     display: block;
