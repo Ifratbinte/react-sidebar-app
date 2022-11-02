@@ -19,7 +19,7 @@ const ThemeContextProvider = ({ children }) => {
   const [themeState, dispatch] = useReducer(themeReducer, defaultState);
 
   const onUpdateLayout = () => {
-    dispatch({ type: "UPDATE", payload: themeState.theme === "light" ? "dark" : "light" });
+    dispatch({ type: "UPDATE", payload: themeState.theme === "dark" ? "light" : "dark" });
   };
 
   const themeCtx = {

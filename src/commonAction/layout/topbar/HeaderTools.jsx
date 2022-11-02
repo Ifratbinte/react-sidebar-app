@@ -6,10 +6,14 @@ function HeaderTools() {
   const themeCtx = useContext(ThemeContext);
   return (
     <>
-      <button className="btn-theme" onClick={themeCtx.updateTheme}>
-        {themeCtx.theme === "light" ? "dark" : "light"}Mode
-      </button>
-      <UserSettings />
+      <ul className="header-tools">
+        <li className="btn-theme" onClick={themeCtx.updateTheme}>
+          {themeCtx.theme === "dark" ? "light" : "dark"}
+        </li>
+        <li>
+          <UserSettings />
+        </li>
+      </ul>
     </>
   );
 }

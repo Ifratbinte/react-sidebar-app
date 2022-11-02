@@ -13,9 +13,9 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="sidebar" style={{ width: Open ? "60px" : "250px" }}>
+      <div className={!Open ? "sidebar show" : "sidebar hide"} style={{ width: Open ? "50px" : "250px" }}>
         <div className="sidebar-top">
-          <h3 className="logo text-white p-3">Logo</h3>
+          <h3 className="logo text-white p-3">L</h3>
         </div>
 
         {sidebarMenu.map((item, index) => (
@@ -29,14 +29,7 @@ export default function Sidebar() {
           <HeaderTools />
         </div>
 
-        <div className="wrapper-body p-3">
-          {/* <h1 className="title">SMS</h1>
-          <p className="info">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <button className="btn">Explore now</button> */}
-        </div>
+        <div className="wrapper-body p-3"></div>
       </div>
     </>
   );

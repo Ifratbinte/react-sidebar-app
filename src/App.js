@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Sidebar from "./commonAction/layout/sidebar/Sidebar";
+import Layout from "./commonAction/layout/sidebar/Layout";
 import ThemeContext from "./store/themeContext";
 import "./style/dark-mode.scss";
 import "./style/main.scss";
@@ -9,7 +9,7 @@ function App() {
   console.log(ctx);
   return (
     <div className="main" data-theme={ctx?.theme}>
-      <Sidebar />
+      <Layout />
     </div>
   );
 }

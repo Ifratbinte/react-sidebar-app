@@ -8,6 +8,10 @@
     align-items: center;
     background-image: linear-gradient(45deg, #4a3068, #282660);
     padding: 8px 16px;
+    .header-tools{
+      display: flex;
+      align-items: center;
+    }
   }
 }
 .user-card-wrap {
