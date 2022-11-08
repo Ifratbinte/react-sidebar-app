@@ -6,11 +6,10 @@ function App() {
   return (
     <div className="main">
       <Sidebar />
-      <div className="container">
+      <div className="main-wrapper">
         <h1 className="title">My React App</h1>
         <p className="info">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
         </p>
         <button className="btn">Explore now</button>
       </div>
